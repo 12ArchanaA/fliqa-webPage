@@ -9,17 +9,12 @@ button {
   cursor: pointer;
 }
 
-.main-container {
-  /* width: vh; */
-}
+.main-container {}
 
-.platform {
-  /* display: grid; */
-}
+.platform {}
 
 .black-bar {
   display: flex;
-  /* gap: 5px; */
   background-color: #131514;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +32,7 @@ button {
   height: 24px;
   left: 401px;
   top: 73px;
-cursor: pointer;
+  cursor: pointer;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -88,7 +83,6 @@ cursor: pointer;
   font-weight: 300;
   font-size: 20px;
   text-align: center;
-
   color: #4C696D;
 }
 
@@ -106,15 +100,6 @@ cursor: pointer;
   gap: 10px;
 }
 
-
-
-
-
-
-
-
-
-
 .associates-container {
   height: 400px;
   background-color: #A1E3D8;
@@ -122,18 +107,19 @@ cursor: pointer;
 
 .associates {
   padding: 10px;
-  /* padding: 0px 0px 0px 10px; */
 }
 
 .associates-content {
   display: flex;
-  gap: 3px;
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
+  gap: 40px;
 }
 
 .title-card img {
   width: 100%;
+}
+
+.title-card-content {
+  padding: 0px 0px 5px 15px;
 }
 
 .heading {
@@ -154,8 +140,7 @@ cursor: pointer;
   border-radius: 24px 24px 24px 24px;
   background-color: #2C2C2C;
   color: #FFFFFF;
-  /* flex: 0 0 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px); */
+  box-shadow: 10px 5px 4px rgba(0, 1, 1, 0.65);
   width: 100%;
 }
 
@@ -223,12 +208,12 @@ cursor: pointer;
   padding: 10px;
 }
 
-.service-button{
+.service-button {
   display: flex;
   justify-content: center;
 }
 
-.service-button button{
+.service-button button {
   width: 202px;
   height: 28px;
   background: #4E99A4;
@@ -253,9 +238,7 @@ cursor: pointer;
   width: 55%;
   height: 47.06px;
   background: #FFFFFF;
-  /* border-right: none; */
   border-top: 1px solid #000000;
-  /* border-radius: 25.5px; */
   border-radius: 24px 24px 24px 24px;
 }
 
@@ -268,7 +251,6 @@ cursor: pointer;
 }
 
 .line {
-  /* position: absolute; */
   width: 110px;
   height: 0px;
   left: 805px;
@@ -363,7 +345,8 @@ cursor: pointer;
   display: flex;
   gap: px;
 }
-.view-more-wedding{
+
+.view-more-wedding {
   display: flex;
   justify-content: center;
 }
@@ -378,16 +361,10 @@ cursor: pointer;
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
-  /* identical to box height */
   border: none;
   text-align: center;
-
   color: #000000;
-
 }
-
-
-
 
 .trending-content {
   display: flex;
@@ -397,7 +374,6 @@ cursor: pointer;
 .trending-content-para h5 {
   font-family: 'K2D';
   font-style: normal;
-  /* font-weight: 700; */
   font-size: 13px;
   line-height: 114%;
 }
@@ -423,7 +399,6 @@ cursor: pointer;
   font-family: 'Itoya-Light';
   font-size: 20px;
   line-height: 23px;
-  /* display: grid; */
   justify-content: center;
   color: #0C0C0C;
 }
@@ -444,12 +419,9 @@ cursor: pointer;
 }
 
 .offers-card-image {
-  /* width: 100%;
-  height: 100%; */
   width: 77%;
   height: 148%;
   background-repeat: no-repeat;
-
 }
 
 .offers-card-image h4 {
@@ -537,7 +509,6 @@ cursor: pointer;
 
 .testimonial-cards {
   display: flex;
-  /* gap: 15px; */
   padding: 10px;
   justify-content: space-between;
 }
@@ -601,9 +572,7 @@ cursor: pointer;
   height: 500px;
 }
 
-.photography-container {
-  /* height: 500px; */
-}
+.photography-container {}
 
 .photography-content {
   display: flex;
@@ -628,51 +597,50 @@ cursor: pointer;
   font-weight: 400;
 }
 
-.back-image{
-  /* height: 300px; */
+.back-image {
   background-repeat: no-repeat;
 }
-.freelance-content{
+
+.freelance-content {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
   padding: 10% 0 0 0;
 }
-.freelance-para h3{
+
+.freelance-para h3 {
   width: 463px;
-height: 60px;
+  height: 60px;
 
-font-family: 'Istok Web';
-font-style: normal;
-/* font-weight: 700; */
-font-size: 30px;
-color: #FFFFFF;
+  font-family: 'Istok Web';
+  font-style: normal;
+  /* font-weight: 700; */
+  font-size: 30px;
+  color: #FFFFFF;
 }
-.freelance-para p{
+
+.freelance-para p {
   width: 288px;
-height: 185px;
+  height: 185px;
 
-font-family: 'Istok Web';
-font-style: normal;
-/* font-weight: 600; */
-font-size: 15px;
-color: #FFFFFF;
+  font-family: 'Istok Web';
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
-.join-button button{
+.join-button button {
   width: 217px;
-height: 34px;
-border: none;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-font-family: 'Istok Web';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 35px;
-text-align: center;
-
-color: #00485E;
-
+  height: 34px;
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  color: #00485E;
 }

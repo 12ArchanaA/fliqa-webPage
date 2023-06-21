@@ -10,7 +10,6 @@ import service2 from "./service2.svg";
 import service3 from "./service3.svg";
 import service4 from "./service4.svg";
 import discoverImg from "./discover.svg";
-import searchbarImg from "./searchbar.svg";
 import disc1 from "./disc1.svg";
 import disc2 from "./disc2.svg";
 import disc3 from "./disc3.svg";
@@ -35,10 +34,20 @@ import content1 from "./content1.svg";
 import content2 from "./content2.svg";
 import content3 from "./content3.svg";
 import content4 from "./content4.svg";
-import wedding1 from './wedding1.svg';
-import collection1 from './collection1.svg';
-import collection2 from './collection2.svg';
-import freelanceImg from './freelanceImg.svg';
+import wedding1 from "./wedding1.svg";
+import collection1 from "./collection1.svg";
+import collection2 from "./collection2.svg";
+import freelanceImg from "./freelanceImg.svg";
+import Service from "./components/Service";
+import Title from "./components/Title";
+import WeddingCard from "./components/WeddingCard";
+import Offers from "./components/Offers";
+import TestimonialCard from "./components/TestimonialCard";
+import Success from "./components/Success";
+import AwardContainer from "./components/AwardContainer";
+import TrendingNow from "./components/TrendingNow";
+import Blogs from "./components/Blogs";
+import PlatformContent from "./components/PlatformContent";
 
 function App() {
   return (
@@ -83,35 +92,27 @@ function App() {
 
             <div className="creative-platform-content">
               <div className="platform-each-content">
-                <div className="content1">
-                  <img src={content1} />
-                  <div>
-                    <h4>Verified Reviews</h4>
-                    <p>For verified reviewers</p>
-                  </div>
-                </div>
+                <PlatformContent
+                  image={content1}
+                  heading={"Verified Reviews"}
+                  paragraph={"For verified reviewers"}
+                />
+                <PlatformContent
+                  image={content2}
+                  heading={"Top Articles"}
+                  paragraph={"Helps you decide"}
+                />
 
-                <div className="content1">
-                  <img src={content2} />
-                  <div>
-                    <h4>Top Articles</h4>
-                    <p>Helps you decide</p>
-                  </div>
-                </div>
-                <div className="content1">
-                  <img src={content3} />
-                  <div>
-                    <h4>Write Share Win Contest</h4>
-                    <p>Earn cash for reviews</p>
-                  </div>
-                </div>
-                <div className="content1">
-                  <img src={content4} />
-                  <div>
-                    <h4>MouthShut for Brands</h4>
-                    <p>Request a Demo</p>
-                  </div>
-                </div>
+                <PlatformContent
+                  image={content3}
+                  heading={"Write Share Win Contest"}
+                  paragraph={"Earn cash for reviews"}
+                />
+                <PlatformContent
+                  image={content4}
+                  heading={"MouthShut for Brands"}
+                  paragraph={"Request a Demo"}
+                />
               </div>
             </div>
           </div>
@@ -128,32 +129,30 @@ function App() {
               </p>
             </div>
             <div className="associates-content">
-              <div className="title-card">
-                <img src={associate1} alt="" />
-                <h3>Name Title</h3>
-                <h4>Location</h4>
-              </div>
-
-              <div className="title-card">
-                <img src={associate2} alt="" />
-                <h3>Name Title</h3>
-                <h4>Location</h4>
-              </div>
-
-              <div className="title-card">
-                <img src={associate3} alt="" />
-                <h3>Name Title</h3>
-                <h4>Location</h4>
-              </div>
-
-              <div className="title-card">
-                <img src={associate5} alt="" />
-                <h3>Name Title</h3>
-                <h4>Location</h4>
-              </div>
+              <Title
+                image={associate1}
+                heading={"Name Title"}
+                name={"Location : "}
+              />
+              <Title
+                image={associate2}
+                heading={"Name Title"}
+                name={"Location : "}
+              />
+              <Title
+                image={associate3}
+                heading={"Name Title"}
+                name={"Location : "}
+              />
+              <Title
+                image={associate5}
+                heading={"Name Title"}
+                name={"Location : "}
+              />
             </div>
           </div>
         </div>
+        <br/>
 
         <div className="services">
           <div className="services-heading">
@@ -164,7 +163,28 @@ function App() {
           </div>
           <div className="services-content-container">
             <div className="service-content">
-              <div className="service-card">
+              <Service
+                image={service1}
+                heading="Pre Wedding Photoshoot"
+                paragraph="Starting at 25,000 (One Day)"
+              />
+              <Service
+                image={service2}
+                heading="Wedding Photoshoot"
+                paragraph="Starting at 65,000 (Two days )"
+              />
+              <Service
+                image={service3}
+                heading="Portfolio Shoot"
+                paragraph="Starting at 15,000 (One day)"
+              />
+              <Service
+                image={service4}
+                heading="Birthday Baby Folio"
+                paragraph="Starting at 15,000 (One day)"
+              />
+
+              {/* <div className="service-card">
                 <img src={service1} />
                 <div className="service-card-content">
                   <h3>Pre Wedding Photoshoot</h3>
@@ -174,9 +194,9 @@ function App() {
                 <div className="service-button">
                   <button>Know More</button>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="service-card">
+              {/* <div className="service-card">
                 <img src={service2} />
                 <div className="service-card-content">
                   <h3>Wedding Photoshoot</h3>
@@ -210,7 +230,7 @@ function App() {
                 <div className="service-button">
                   <button>Know More</button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -273,75 +293,46 @@ function App() {
             <p className="content">Check out our Latest Blog</p>
           </div>
           <div className="blogs-content">
-            <div
-              className="blogs-background"
-              style={{ backgroundImage: `url(${blogs1})` }}
-            >
-              <div className="blogs-content1">
-                <div className="blogs-para">
-                  <h5>Featured on: Sep 15, 2021</h5>
-                  <p>Wedding Photography at Goa</p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="blogs-background"
-              style={{ backgroundImage: `url(${blogs1})` }}
-            >
-              <div className="blogs-content1">
-                <div className="blogs-para">
-                  <h5>Featured on: Sep 15, 2021 </h5>
-                  <p>Photography: Expectations vs. Reality</p>
-                </div>
-              </div>
-            </div>
+            <Blogs
+              image={blogs1}
+              heading={"Featured on: Sep 15, 2021"}
+              paragraph={"Wedding Photography at Goa"}
+            />
+            <Blogs
+              image={blogs1}
+              heading={"Featured on: Sep 15, 2021"}
+              paragraph={"Photography: Expectations vs. Reality"}
+            />
 
             <div className="trending-container">
               <div className="trending-heading">
                 <h6>Trending Now</h6>
               </div>
-              <div className="trending-content">
-                <div className="trending-content-image">
-                  <img src={trending2} />
-                </div>
-                <div className="trending-content-para">
-                  <h5>
-                    Creative Industries are on the verge of depletion due to
-                    COVID-19
-                  </h5>
-                  <p>
-                    In a period where many industries remain highly
-                    unclear,others want to grasp how COVID-19 impact
-                  </p>
-                </div>
-              </div>
+              <TrendingNow
+                image={trending2}
+                heading={
+                  "Creative Industries are on the verge of depletion due to COVID-19"
+                }
+                paragraph={
+                  "In a period where many industries remain highly unclear,others want to grasp how COVID-19 impact"
+                }
+              />
               <hr />
-              <div className="trending-content">
-                <div className="trending-content-image">
-                  <img src={trending2} />
-                </div>
-                <div className="trending-content-para">
-                  <h5>Photography: Expectations vs. Reality</h5>
-                  <p>
-                    Most of the time without any hands-on experience in
-                    photography, professional and advanced photography actually
-                  </p>
-                </div>
-              </div>
+              <TrendingNow
+                image={trending2}
+                heading={"Photography: Expectations vs. Reality"}
+                paragraph={
+                  "Most of the time without any hands-on experience in photography, professional and advanced photography actually"
+                }
+              />
               <hr />
-              <div className="trending-content">
-                <div className="trending-content-image">
-                  <img src={trending2} />
-                </div>
-                <div className="trending-content-para">
-                  <h5>Wedding Photography at Goa</h5>
-                  <p>
-                    Wedding Photography in Goa If not, every couple when they
-                    make their list of Pre-wedding shoot{" "}
-                  </p>
-                </div>
-              </div>
+              <TrendingNow
+                image={trending2}
+                heading={"Wedding Photography at Goa"}
+                paragraph={
+                  " Wedding Photography in Goa If not, every couple when they make their list of Pre-wedding shoot`{'}'}`"
+                }
+              />
               <hr />
             </div>
           </div>
@@ -354,74 +345,30 @@ function App() {
           </div>
           <div className="real-wedding-content">
             <div className="wedding-card-container">
-              <div className="wedding-card">
-                <div className="wedding-card-image">
-                  <div>
-                    <img src={wedding1} />
-                  </div>
-                  <div className="photo-collection">
-                    <div>
-                      <img src={collection1} />
-                    </div>
-                    <div>
-                      <img src={collection2} />
-                    </div>
-                    <div>
-                      <img src={collection2} />
-                    </div>
-                  </div>
-                </div>
-                <div className="wedding-card-para">
-                  <h3>Danielle & Ronnie</h3>
-                  <p>38 photos. Kittery,Polland</p>
-                </div>
-              </div>
-
-              <div className="wedding-card">
-                <div className="wedding-card-image">
-                  <div>
-                    <img src={wedding1} />
-                  </div>
-                  <div className="photo-collection">
-                    <div>
-                      <img src={collection1} />
-                    </div>
-                    <div>
-                      <img src={collection2} />
-                    </div>
-                    <div>
-                      <img src={collection2} />
-                    </div>
-                  </div>
-                </div>
-                <div className="wedding-card-para">
-                  <h3>Danielle & Ronnie</h3>
-                  <p>38 photos. Kittery,Polland</p>
-                </div>
-              </div>
-
-              <div className="wedding-card">
-                <div className="wedding-card-image">
-                  <div>
-                    <img src={wedding1} />
-                  </div>
-                  <div className="photo-collection">
-                    <div>
-                      <img src={collection1} />
-                    </div>
-                    <div>
-                      <img src={collection2} />
-                    </div>
-                    <div>
-                      <img src={collection2} />
-                    </div>
-                  </div>
-                </div>
-                <div className="wedding-card-para">
-                  <h3>Danielle & Ronnie</h3>
-                  <p>38 photos. Kittery,Polland</p>
-                </div>
-              </div>
+              <WeddingCard
+                image1={wedding1}
+                image2={collection1}
+                image3={collection2}
+                image4={collection2}
+                heading={"Danielle & Ronnie"}
+                paragraph={"38 photos. Kittery,Polland"}
+              />
+              <WeddingCard
+                image1={wedding1}
+                image2={collection1}
+                image3={collection2}
+                image4={collection2}
+                heading={"Danielle & Ronnie"}
+                paragraph={"38 photos. Kittery,Polland"}
+              />
+              <WeddingCard
+                image1={wedding1}
+                image2={collection1}
+                image3={collection2}
+                image4={collection2}
+                heading={"Danielle & Ronnie"}
+                paragraph={"38 photos. Kittery,Polland"}
+              />
             </div>
           </div>
           <div className="view-more-wedding">
@@ -441,77 +388,37 @@ function App() {
               </p>
             </div>
             <div className="offers-content">
-              <div className="offers-card">
-                <div
-                  className="offers-card-image"
-                  style={{ backgroundImage: `url(${offers1})` }}
-                >
-                  <div className="offers-card-para">
-                    <h4>Wedding Packages</h4>
-                    <hr />
-                  </div>
-                  <div className="discount-content">
-                    <h4>DISCOUNT</h4>
-                    <img src={removebg} />
-                  </div>
-                </div>
-
-                <h4>BOOK NOW</h4>
-              </div>
+              <Offers
+                image1={offers1}
+                heading1={"Wedding Packages"}
+                heading2={"DISCOUNT"}
+                image2={removebg}
+                heading3={"BOOK NOW"}
+              />
               <hr />
-              <div className="offers-card">
-                <div
-                  className="offers-card-image"
-                  style={{ backgroundImage: `url(${offers1})` }}
-                >
-                  <div className="offers-card-para">
-                    <h4>Wedding Packages</h4>
-                    <hr />
-                  </div>
-                  <div className="discount-content">
-                    <h4>DISCOUNT</h4>
-                    <img src={removebg} />
-                  </div>
-                </div>
-
-                <h4>BOOK NOW</h4>
-              </div>
+              <Offers
+                image1={offers1}
+                heading1={"Wedding Packages"}
+                heading2={"DISCOUNT"}
+                image2={removebg}
+                heading3={"BOOK NOW"}
+              />
               <hr />
-              <div className="offers-card">
-                <div
-                  className="offers-card-image"
-                  style={{ backgroundImage: `url(${offers1})` }}
-                >
-                  <div className="offers-card-para">
-                    <h4>Wedding Packages</h4>
-                    <hr />
-                  </div>
-                  <div className="discount-content">
-                    <h4>DISCOUNT</h4>
-                    <img src={removebg} />
-                  </div>
-                </div>
-
-                <h4>BOOK NOW</h4>
-              </div>
+              <Offers
+                image1={offers1}
+                heading1={"Wedding Packages"}
+                heading2={"DISCOUNT"}
+                image2={removebg}
+                heading3={"BOOK NOW"}
+              />
               <hr />
-              <div className="offers-card">
-                <div
-                  className="offers-card-image"
-                  style={{ backgroundImage: `url(${offers1})` }}
-                >
-                  <div className="offers-card-para">
-                    <h4>Wedding Packages</h4>
-                    <hr />
-                  </div>
-                  <div className="discount-content">
-                    <h4>DISCOUNT</h4>
-                    <img src={removebg} />
-                  </div>
-                </div>
-
-                <h4>BOOK NOW</h4>
-              </div>
+              <Offers
+                image1={offers1}
+                heading1={"Wedding Packages"}
+                heading2={"DISCOUNT"}
+                image2={removebg}
+                heading3={"BOOK NOW"}
+              />
             </div>
           </div>
         </div>
@@ -540,41 +447,24 @@ function App() {
                 </div>
               </div>
               <div className="testimonial-cards">
-                <div className="card">
-                  <div className="card-head">
-                    <img src={testRoundImg} />
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet{" "}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="card">
-                  <div className="card-head">
-                    <img src={testRoundImg} />
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet{" "}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="card">
-                  <div className="card-head">
-                    <img src={testRoundImg} />
-                  </div>
-                  <div className="card-content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet{" "}
-                    </p>
-                  </div>
-                </div>
+                <TestimonialCard
+                  image={testRoundImg}
+                  paragraph={
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet`{}` "
+                  }
+                />
+                <TestimonialCard
+                  image={testRoundImg}
+                  paragraph={
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet`{}` "
+                  }
+                />
+                <TestimonialCard
+                  image={testRoundImg}
+                  paragraph={
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet`{}` "
+                  }
+                />
               </div>
             </div>
           </div>
@@ -589,30 +479,9 @@ function App() {
               <img src={awardsImg} />
             </div>
             <div className="rating-container">
-              <div className="rating">
-                <div className="rating-box">
-                  <img src={rating1} />
-                </div>
-                <div className="rating-box">
-                  <img src={rating2} />
-                </div>
-              </div>
-              <div className="rating">
-                <div className="rating-box">
-                  <img src={rating2} />
-                </div>
-                <div className="rating-box">
-                  <img src={rating1} />
-                </div>
-              </div>
-              <div className="rating">
-                <div className="rating-box">
-                  <img src={rating1} />
-                </div>
-                <div className="rating-box">
-                  <img src={rating2} />
-                </div>
-              </div>
+              <AwardContainer image1={rating1} image2={rating2} />
+              <AwardContainer image1={rating1} image2={rating2} />
+              <AwardContainer image1={rating1} image2={rating2} />
             </div>
           </div>
         </div>
@@ -624,58 +493,31 @@ function App() {
           </div>
           <div className="success-remaining-container">
             <div className="success-remaining">
-              <div className="success-card">
-                <div className="circle">
-                  {/* style={{ backgroundImage: `url(${success1})` }} */}
-                  {/* <img src={success1} /> */}
-                </div>
-                <div className="success-card-para">
-                  <p>
-                    Back in 2019, FliqaIndia recognize as a startup with DPIT in
-                    Startup India.
-                  </p>
-                </div>
-              </div>
-
-              <div className="success-card">
-                <div className="circle">{/* <img src={success1} /> */}</div>
-                <div className="success-card-para">
-                  <p>
-                    Back in 2019, FliqaIndia recognize as a startup with DPIT in
-                    Startup India.
-                  </p>
-                </div>
-              </div>
-
-              <div className="success-card">
-                <div className="circle">{/* <img src={success1} /> */}</div>
-                <div className="success-card-para">
-                  <p>
-                    Back in 2019, FliqaIndia recognize as a startup with DPIT in
-                    Startup India.
-                  </p>
-                </div>
-              </div>
-
-              <div className="success-card">
-                <div className="circle">{/* <img src={success1} /> */}</div>
-                <div className="success-card-para">
-                  <p>
-                    Back in 2019, FliqaIndia recognize as a startup with DPIT in
-                    Startup India.
-                  </p>
-                </div>
-              </div>
-
-              <div className="success-card">
-                <div className="circle">{/* <img src={success1} /> */}</div>
-                <div className="success-card-para">
-                  <p>
-                    Back in 2019, FliqaIndia recognize as a startup with DPIT in
-                    Startup India.
-                  </p>
-                </div>
-              </div>
+              <Success
+                paragraph={
+                  "Back in 2019, FliqaIndia recognize as a startup with DPIT in Startup India."
+                }
+              />
+              <Success
+                paragraph={
+                  "Back in 2019, FliqaIndia recognize as a startup with DPIT in Startup India."
+                }
+              />
+              <Success
+                paragraph={
+                  "Back in 2019, FliqaIndia recognize as a startup with DPIT in Startup India."
+                }
+              />
+              <Success
+                paragraph={
+                  "Back in 2019, FliqaIndia recognize as a startup with DPIT in Startup India."
+                }
+              />
+              <Success
+                paragraph={
+                  "Back in 2019, FliqaIndia recognize as a startup with DPIT in Startup India."
+                }
+              />
             </div>
           </div>
         </div>
@@ -723,5 +565,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
